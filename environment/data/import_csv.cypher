@@ -3,7 +3,7 @@
 // Create orders
 LOAD CSV WITH HEADERS FROM 'file:///orders.csv' AS row
 MERGE (order:Order {orderID: row.OrderID})
-  ON CREATE SET order.shipName = row.ShipName;
+  ON CREATE SET order.shipName = row.ShipName, order.orderDate = date(row.OrderDate), order.requiredDate = date(row.RequiredDate), order.shippedDate = date(row.ShippedDate), order.freight = row.Freight, order.shipName = row.ShipName, order.shipAddress = row.ShipAddress, order.shipCity = row.ShipCity, order.shipRegion = row.ShipRegion, order.shipPostalCode = row.ShipPostalCode, order.shipCountry = row.ShipCountry;
 
 // Create products
 LOAD CSV WITH HEADERS FROM "file:///products.csv" AS row
@@ -18,7 +18,7 @@ MERGE (supplier:Supplier {supplierID: row.SupplierID})
 // Create employees
 LOAD CSV WITH HEADERS FROM "file:///employees.csv" AS row
 MERGE (e:Employee {employeeID:row.EmployeeID})
-  ON CREATE SET e.firstName = row.FirstName, e.lastName = row.LastName, e.title = row.Title;
+  ON CREATE SET e.firstName = row.FirstName, e.lastName = row.LastName, e.title = row.Title, e.prefix = row.TitleOfCourtesy, e.birthDate = date(row.BirthDate);
 
 // Create categories
 LOAD CSV WITH HEADERS FROM "file:///categories.csv" AS row
@@ -58,7 +58,7 @@ LOAD CSV WITH HEADERS FROM "file:///orders.csv" AS row
 MATCH (order:Order {orderID: row.OrderID})
 MATCH (product:Product {productID: row.ProductID})
 MERGE (order)-[pu:INCLUDES]->(product)
-ON CREATE SET pu.unitPrice = toFloat(row.UnitPrice), pu.quantity = toFloat(row.Quantity);
+ON CREATE SET pu.unitPrice = toFloat(row.UnitPrice), pu.quantity = toFloat(row.Quantity), pu.discountPercent = toFloat(row.Discount)*100;
 
 // Create relationships between orders and employees
 LOAD CSV WITH HEADERS FROM "file:///orders.csv" AS row

@@ -13,4 +13,5 @@
 
 ## 2do
 
-- find and import the data for region, territory, employee territory, and state.
+- find and import the data for region, territory, employee territory, customer demographics, and state.
+- import all fields from all tables into neo4j.
