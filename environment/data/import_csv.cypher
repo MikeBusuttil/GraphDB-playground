@@ -37,6 +37,7 @@ MERGE (s:Shipper {shipperID: row.ShipperID})
 // end::nodes[]
 
 // tag::constraints[]
+
 CREATE INDEX product_id FOR (p:Product) ON (p.productID);
 CREATE INDEX product_name FOR (p:Product) ON (p.productName);
 CREATE INDEX supplier_id FOR (s:Supplier) ON (s.supplierID);
@@ -46,6 +47,7 @@ CREATE INDEX customer_id FOR (c:Customer) ON (c.customerID);
 CREATE INDEX shipper_id FOR (s:Shipper) ON (s.shipperID);
 CREATE CONSTRAINT FOR(o:Order) REQUIRE o.orderID IS UNIQUE;
 CALL db.awaitIndexes();
+
 // end::constraints[]
 
 // tag::rels_orders[]
@@ -78,6 +80,7 @@ MERGE (shipper)-[:SHIPS]->(order);
 // end::rels_orders[]
 
 // tag::rels_products[]
+
 // Create relationships between products and suppliers
 LOAD CSV WITH HEADERS FROM "file:///products.csv" AS row
 MATCH (product:Product {productID: row.ProductID})
@@ -89,12 +92,15 @@ LOAD CSV WITH HEADERS FROM "file:///products.csv" AS row
 MATCH (product:Product {productID: row.ProductID})
 MATCH (category:Category {categoryID: row.CategoryID})
 MERGE (product)<-[:CONTAINS]-(category);
+
 // end::rels_products[]
 
 // tag::rels_employees[]
+
 // Create relationships between employees (reporting hierarchy)
 LOAD CSV WITH HEADERS FROM "file:///employees.csv" AS row
 MATCH (employee:Employee {employeeID: row.EmployeeID})
 MATCH (manager:Employee {employeeID: row.ReportsTo})
 MERGE (employee)<-[:MANAGES]-(manager);
+
 // end::rels_employees[]
