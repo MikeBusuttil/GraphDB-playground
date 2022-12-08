@@ -1,0 +1,31 @@
+version: "3.9"
+
+services:
+  neo4j:
+    container_name: nice_graph
+    image: neo4j
+    volumes:
+      - ./cql:/data
+      - ./data:/var/lib/neo4j/import
+    restart: always
+    environment:
+      NEO4J_AUTH: neo4j/pass
+      TZ: America/Toronto
+    network_mode: bridge
+    ports:
+     - 7474:7474
+     - 7687:7687
+  mariadb:
+    container_name: nice_rdbms
+    image: mariadb
+    volumes:
+      - ./sql:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: pass
+      MYSQL_DATABASE: northwind
+      MYSQL_USER: mariadb
+      MYSQL_PASSWORD: pass
+    network_mode: bridge
+    ports:
+     - 3306:3306
