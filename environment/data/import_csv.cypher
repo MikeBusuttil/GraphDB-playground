@@ -42,6 +42,7 @@ CREATE INDEX product_name FOR (p:Product) ON (p.productName);
 CREATE INDEX supplier_id FOR (s:Supplier) ON (s.supplierID);
 CREATE INDEX employee_id FOR (e:Employee) ON (e.employeeID);
 CREATE INDEX category_id FOR (c:Category) ON (c.categoryID);
+CREATE INDEX customer_id FOR (c:Customer) ON (c.customerID);
 CREATE INDEX shipper_id FOR (s:Shipper) ON (s.shipperID);
 CREATE CONSTRAINT FOR(o:Order) REQUIRE o.orderID IS UNIQUE;
 CALL db.awaitIndexes();
