@@ -15,3 +15,4 @@
 
 - find and import the data for region, territory, employee territory, customer demographics, and state.
 - import all fields from all tables into neo4j.
+- format the numbers nicely (ie. $3,002.67) in neo4j queries - this might involve the installation of apoc.
