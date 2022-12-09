@@ -22,10 +22,10 @@ services:
       - ./sql:/var/lib/mysql
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: pass
+      MYSQL_ROOT_PASSWORD: ${NORTHWIND_MYSQL}
       MYSQL_DATABASE: northwind
       MYSQL_USER: mariadb
       MYSQL_PASSWORD: pass
     network_mode: bridge
     ports:
-     - 3306:3306
+     - 3310:3306
