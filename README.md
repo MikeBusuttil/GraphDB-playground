@@ -30,3 +30,4 @@ The following assumes you have `docker` engine & `docker-compose` installed.  Al
 
 - expand on the exercises & answers sections to get a better sense of how working with the 2 paradigms differs.
 - find and import the data for region, territory, employee territory, customer demographics, and state.
+- format the numbers nicely (ie. $3,002.67) in neo4j queries - this might involve the installation of apoc.
