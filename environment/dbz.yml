@@ -9,7 +9,7 @@ services:
       - ./data:/var/lib/neo4j/import
     restart: always
     environment:
-      NEO4J_AUTH: neo4j/pass
+      NEO4J_AUTH: neo4j/password
       TZ: America/Toronto
     network_mode: bridge
     ports:
@@ -25,7 +25,7 @@ services:
       MYSQL_ROOT_PASSWORD: ${NORTHWIND_MYSQL}
       MYSQL_DATABASE: northwind
       MYSQL_USER: mariadb
-      MYSQL_PASSWORD: pass
+      MYSQL_PASSWORD: password
     network_mode: bridge
     ports:
      - 3310:3306
