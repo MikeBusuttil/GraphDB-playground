@@ -1,6 +1,6 @@
 # Database Querying Exercises
 
-The following exercises are meant to be tacked by both SQL and CQL to illustrate how each paradigm compares.
+The following exercises are meant to be tacked by both SQL and CQL to illustrate how each paradigm compares.  The answers to each can be found in the `answers` folder of this repo.
 
 ## 1. Featured
 
