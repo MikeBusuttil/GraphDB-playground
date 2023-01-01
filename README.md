@@ -38,6 +38,14 @@ docker exec -i nice_rdbms mysql -u root --password=$NORTHWIND_MYSQL < ./environm
 docker exec -i nice_graph /var/lib/neo4j/bin/cypher-shell -u neo4j -p password < ./environment/data/import_csv.cypher
 ```
 
+### tearing down the environment
+
+```
+docker-compose -f ./environment/dbz.yml down
+sudo rm -rf ./environment/sql
+sudo rm -rf ./environment/cql
+```
+
 ## 2do
 
 - expand on the exercises & answers sections to get a better sense of how working with the 2 paradigms differs.
