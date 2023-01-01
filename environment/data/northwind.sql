@@ -1,4 +1,6 @@
 /*
+Thanks to https://documentation.alphasoftware.com/pages/GettingStarted/GettingStartedTutorials/Basic%20Tutorials/Northwind/northwindMySQL.xml for converting the data into the desired format
+
 Navicat MySQL Data Transfer
 
 Source Server         : localhost

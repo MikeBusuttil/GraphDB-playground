@@ -1,3 +1,4 @@
+// Adapted from https://neo4j.com/developer/guide-importing-data-and-etl/
 // tag::nodes[]
 
 // Create orders
