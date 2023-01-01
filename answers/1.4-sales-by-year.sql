@@ -1,15 +1,21 @@
-select distinct date(a.ShippedDate) as ShippedDate, 
-    a.OrderID, 
-    b.Subtotal, 
-    year(a.ShippedDate) as Year
-from orders a 
-inner join
-(
+SELECT
+  DISTINCT date(a.ShippedDate) AS ShippedDate,
+  a.OrderID,
+  b.Subtotal,
+  year(a.ShippedDate) AS Year
+FROM
+  orders a
+  INNER JOIN (
     -- Get subtotal for each order
-    select distinct OrderID, 
-        format(sum(UnitPrice * Quantity * (1 - Discount)), 2) as Subtotal
-    from `order details`
-    group by OrderID    
-) b on a.OrderID = b.OrderID
-where a.ShippedDate is not null
-order by a.ShippedDate
+    SELECT
+      DISTINCT OrderID,
+      format(sum(UnitPrice * Quantity * (1 - Discount)), 2) AS Subtotal
+    FROM
+      `order details`
+    GROUP BY
+      OrderID
+  ) b ON a.OrderID = b.OrderID
+WHERE
+  a.ShippedDate IS NOT NULL
+ORDER BY
+  a.ShippedDate
