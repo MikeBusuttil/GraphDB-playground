@@ -43,3 +43,8 @@ docker exec -i nice_graph /var/lib/neo4j/bin/cypher-shell -u neo4j -p password <
 - expand on the exercises & answers sections to get a better sense of how working with the 2 paradigms differs.
 - find and import the data for region, territory, employee territory, customer demographics, and state.
 - format the numbers nicely (ie. $3,002.67) in neo4j queries - this might involve the installation of apoc.
+- generate a very large data set to see how the performance of each paradigm scales
+
+## References
+
+- Many of the exercises were adapted from [SQL Practice Problems: 57 beginning, intermediate, and advanced challenges for you to solve using a “learn-by-doing” approach](https://www.amazon.ca/SQL-Practice-Problems-learn-doing-ebook/dp/B01N41VQFO) by Sylvia Moestl Vasilik

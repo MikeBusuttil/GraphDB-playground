@@ -1,3 +1,9 @@
+# Database Querying Exercises
+
+The following exercises are meant to be tacked by both SQL and CQL to illustrate how each paradigm compares.
+
+## 1. Featured
+
 1. Visualize the org chart
 
 2. Lets see an order
@@ -12,43 +18,19 @@
 
 7. How Many Orders were Made under each employee?
 
-/*
-	From the book 57 beginning, intermediate, and advanced challenges for you to solve using a "learn-by-doing" approach
-	By Sylvia Moestl Vasilik
-*/
+## 2. Introductory
 
---Introductory Problems
+1. Which shippers do we have?
 
-USE Northwind
+2. What is the description for each category?
 
---1. Which shippers do we have?
-SELECT *
-FROM shippers
+3. Get FirstName,LastName,HireDate of the Sales Representatives from USA.
 
---2. Select certain fields from categories
-SELECT CategoryName, Description
-FROM categories
+4. Find orders placed by employee # 4.
 
+5. Show supplier contacts of suppliers who are not 'Marketing Manager'.
 
---3. Get FirstName,LastName,HireDate of the Sales Representatives from USA
-SELECT FirstName, LastName, HireDate
-FROM employees
-WHERE Title = 'Sales Representative' AND Country = 'USA'
-
---4. Find ordersplaced by specific EmployeeID
-SELECT OrderID, OrderDate
-FROM orders
-WHERE EmployeeID = 5
-
---5. suppliers and ContactTitles of suppliers who are not 'Marketing Manager'
-SELECT SupplierID, ContactName, ContactTitle
-FROM suppliers
-WHERE ContactTitle <> 'Marketing Manager'
-
---6. products with "queso" in ProductName
-SELECT ProductID, ProductName
-FROM products
-WHERE ProductName LIKE '%queso%'
+6. List products with "queso" in the name.
 
 --7. Find ordersshipping to France or Belgium
 SELECT OrderID, CustomerID, ShipCountry
