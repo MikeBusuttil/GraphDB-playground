@@ -32,45 +32,19 @@ The following exercises are meant to be tacked by both SQL and CQL to illustrate
 
 6. List products with "queso" in the name.
 
---7. Find ordersshipping to France or Belgium
-SELECT OrderID, CustomerID, ShipCountry
-FROM orders
-WHERE ShipCountry = 'France' OR ShipCountry = 'Belgium'
+7. Find ordersshipping to France or Belgium
 
---8. ordersshipping to any country in Latin America
-SELECT OrderID, CustomerID, ShipCountry
-FROM orders
-WHERE ShipCountry  IN ('Brazil', 'Mexico', 'Argentina', 'Venezuela')
+8. ordersshipping to any country in Latin America
 
---9. employees, in order of age
-SELECT FirstName, LastName, Title, BirthDate, TIMESTAMPDIFF(YEAR, BirthDate, CURDATE()) AS Age
-FROM employees
-ORDER BY Birthdate
+9. employees, in order of age
 
---10. employees full name
-SELECT CONCAT(TitleOfCourtesy, ' ', FirstName, ' ', LastName) AS name
-FROM employees
+10. employees full name
 
---15. Count customers per each contact titles
-SELECT ContactTitle,COUNT(*) AS TotalContactTitle
-FROM customers
-GROUP BY ContactTitle
-Order by COUNT(*) DESC
+11. Count customers per each contact titles
 
---16. products and associated supplier names
-SELECT ProductID,ProductName,CompanyName AS Supplier
-FROM products P
-JOIN suppliers S
-ON P.SupplierID = S.SupplierID
-ORDER BY CompanyName
+12. products and associated supplier names
 
---17. orders and the Shipper that was used for OrderDate BETWEEN '1996-05-01' AND '1996-05-12'
-SELECT OrderID, CONVERT(DATE, OrderDate) AS OrderDate,Shipper = CompanyName
-FROM orders
-JOIN shippers
-ON shippers.ShipperID = orders.ShipVia
-WHERE OrderDate BETWEEN '1996-05-01' AND '1996-05-12'
-ORDER BY OrderID
+13. orders and the Shipper that was used for OrderDate BETWEEN '1996-05-01' AND '1996-05-12'
 
 ## 3. Intermediate
 
@@ -98,7 +72,7 @@ ORDER BY OrderID
 
 4. Which salespeople have the most orders arriving late?
 
-5. For each employee compare Late ordersvs. total orders
+5. For each employee compare Late orders versus total orders.
 
 6. Customer grouping
 
