@@ -32,19 +32,17 @@ The following exercises are meant to be tacked by both SQL and CQL to illustrate
 
 6. List products with "queso" in the name.
 
-7. Find ordersshipping to France or Belgium
+7. Find orders shipping to France or Belgium.
 
-8. ordersshipping to any country in Latin America
+8. Find orders shipping to any country in Latin America.
 
-9. employees, in order of age
+9. List employees with full name, in order of age.
 
-10. employees full name
+10. Count customers per each contact titles
 
-11. Count customers per each contact titles
+11. Who supplies each product?
 
-12. products and associated supplier names
-
-13. orders and the Shipper that was used for OrderDate BETWEEN '1996-05-01' AND '1996-05-12'
+12. List the orders made in the first 2 weeks of May 1996 with the Shipper that was used for each order.
 
 ## 3. Intermediate
 

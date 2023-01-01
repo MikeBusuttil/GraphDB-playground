@@ -1,2 +1,4 @@
-SELECT CONCAT(TitleOfCourtesy, ' ', FirstName, ' ', LastName) AS name
-FROM employees
+SELECT ContactTitle,COUNT(*) AS TotalContactTitle
+FROM customers
+GROUP BY ContactTitle
+Order by COUNT(*) DESC
