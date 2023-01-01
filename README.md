@@ -17,7 +17,7 @@ To self-host the databases, refer to the following:
 
 ### pre-requisites
 
-The following assumes you have `docker` engine & `docker-compose` installed.  Also, the MySQL root password is taken from your systems environment variable `NORTHWIND_MYSQL` which should be set to `password` in order for step #2 below to work.
+The following assumes you have `docker` engine & `docker-compose` installed.  Also, the MySQL root password is taken from your system's environment variable "`NORTHWIND_MYSQL`" which should be set in order for steps #1 & #2 below to work.
 
 ### building the environment
 
@@ -27,11 +27,11 @@ docker-compose -f ./environment/dbz.yml up -d
 ```
   - note: when running `docker-compose` as root you may lose permission to the data directory.  To fix this run:
 ```
-sudo chmod -R 777 ./environment/data`
+sudo chmod -R 777 ./environment/data
 ```
 2. populate the relational database with the following:
 ```
-docker exec -i nice_rdbms mysql -u root --password=password < ./environment/data/northwind.sql
+docker exec -i nice_rdbms mysql -u root --password=$NORTHWIND_MYSQL < ./environment/data/northwind.sql
 ```
 3. populate the graph database with the following:
 ```
