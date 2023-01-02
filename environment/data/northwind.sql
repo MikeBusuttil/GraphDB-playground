@@ -3678,3 +3678,9 @@ ALTER TABLE `Products` ADD CONSTRAINT `FK_Products_Suppliers`
 
 ALTER TABLE `Territories` ADD CONSTRAINT `FK_Territories_Region` 
   FOREIGN KEY (`RegionID`) REFERENCES `Region` (`RegionID`);
+
+-- ------------------------------------------
+-- Permissions for public user
+-- ------------------------------------------
+REVOKE ALL PRIVILEGES ON northwind.* FROM 'mariadb'@'%';
+GRANT SELECT ON northwind.* TO 'mariadb'@'%';
