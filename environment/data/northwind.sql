@@ -1,5 +1,7 @@
 /*
-This is an amalgamation of data from the following sources:
+Northwind Traders Dataset for MySQL
+
+This seeks to be the most accurate port of the original Northwind dataset into MySQL.  It is an amalgamation of data from the following sources:
 - https://documentation.alphasoftware.com/pages/GettingStarted/GettingStartedTutorials/Basic%20Tutorials/Northwind/northwindMySQL.xml
 - https://docs.yugabyte.com/preview/sample-data/northwind
 - https://code.google.com/archive/p/northwindextended/downloads
