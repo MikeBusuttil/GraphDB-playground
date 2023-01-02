@@ -1,3 +1,4 @@
-MATCH (o:Order)
-WHERE date({year: 1995, month: 5, day: 1}) <= o.orderDate <= date({year: 1995, month: 5, day: 14})
-RETURN o
+MATCH (o:Order)-[:SHIPS]-(s:Shipper)
+WHERE date('1997-05-01') <= o.orderDate <= date('1997-05-14')
+RETURN o.orderID, o.orderDate, s.companyName
+ORDER BY o.orderDate
