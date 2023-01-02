@@ -46,17 +46,17 @@ The following exercises are meant to be tacked by both SQL and CQL to illustrate
 
 ## 3. Intermediate
 
-1. categories, and the total products in each category
+1. What's the total number of products in each category?
 
-2. Total customers per country/city
+2. How many customers are in each city?
 
-3. Find products that are below inventory thresholds
+3. Find products that are below inventory thresholds.
 
-4. Find products that need reordering
+4. Find products that need reordering.
 
 5. Customer list by region and get nulls at the bottom
 
-6. High freight charges for top 3 shipping countries in 1996
+6. What are the top 3 countries with the highest freight charges in 1996?
 
 7. customers with no orders
 
