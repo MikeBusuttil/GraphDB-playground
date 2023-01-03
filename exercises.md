@@ -62,7 +62,7 @@ The following exercises are meant to be tacked by both SQL and CQL to illustrate
 
 ## 4. Advanced Problems
 
-1. Customers with orders over $10k in 1997
+1. Which customers have orders over $10k in 1997?
 
 2. orders- accidental double-entry
 

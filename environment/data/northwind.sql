@@ -293,7 +293,7 @@ CREATE TABLE `Order Details` (
   `ProductID` INTEGER NOT NULL,
   `UnitPrice` DECIMAL(10,4) NOT NULL DEFAULT 0,
   `Quantity` SMALLINT(2) NOT NULL DEFAULT 1,
-  `Discount` REAL(8,0) NOT NULL DEFAULT 0,
+  `Discount` DECIMAL(2,2) NOT NULL DEFAULT 0,
   CONSTRAINT `PK_Order Details` PRIMARY KEY (`OrderID`, `ProductID`)
 );
 

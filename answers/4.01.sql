@@ -1,20 +1,18 @@
 SELECT
-  customers.CustomerID,
-  customers.CompanyName,
-  orders.OrderID,
+  Customers.CompanyName,
   SUM(Quantity * UnitPrice * (1 - Discount)) AS TotalOrderAmount
 FROM
-  customers
-  JOIN orders ON orders.CustomerID = customers.CustomerID
-  JOIN `order details` ON orders.OrderID = `order details`.OrderID
+  Customers
+  JOIN Orders ON Orders.CustomerID = Customers.CustomerID
+  JOIN `Order Details` ON Orders.OrderID = `Order Details`.OrderID
 WHERE
-  OrderDate >= '1996-01-01'
-  AND OrderDate < '1997-01-01'
+  OrderDate >= '1997-01-01'
+  AND OrderDate < '1998-01-01'
 GROUP BY
-  customers.CustomerID,
-  customers.CompanyName,
-  orders.Orderid
+  Customers.CustomerID,
+  Customers.CompanyName,
+  Orders.Orderid
 HAVING
-  SUM(Quantity * UnitPrice) > 10000
+  TotalOrderAmount > 10000
 ORDER BY
   TotalOrderAmount DESC
