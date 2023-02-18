@@ -1,6 +1,6 @@
 # Database Querying Exercises
 
-The following exercises are meant to be tacked by both SQL and CQL to illustrate how each paradigm compares.  The answers to each can be found in the `answers` folder of this repo.
+The following exercises are meant to be tackled by both SQL and CQL to illustrate how each paradigm compares.  The answers to each can be found in the `answers` folder of this repo.
 
 ## 1. Featured
 
@@ -12,11 +12,11 @@ The following exercises are meant to be tacked by both SQL and CQL to illustrate
 
 4. Sales by year?
 
-5. Which Employees had the Highest Cross-Selling Count of 'Chocolade' and Another Product?
+5. How much revenue did each employee bring in?
 
-6. How much revenue did each employee bring in?
+6. How Many Orders were Made under each employee?
 
-7. How Many Orders were Made under each employee?
+7. Which Employees had the Highest Cross-Selling Count of 'Chocolade' and Another Product?
 
 ## 2. Introductory
 

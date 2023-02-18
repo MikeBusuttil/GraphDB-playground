@@ -48,11 +48,13 @@ sudo rm -rf ./environment/cql
 
 ## 2do
 
-- expand on the exercises & answers sections to get a better sense of how working with the 2 paradigms differs.
+- expand on the exercises & answers sections to get a better sense of how working with the 2 paradigms differs:
+  - devise a query that spans all tables
 - find and import the data for customer demographics.
 - import the data for region, territory, employee territory, customer demographics, and state into Neo4j.
 - format the numbers nicely (ie. $3,002.67) in neo4j queries - this might involve the installation of apoc.
 - generate a very large data set to see how the performance of each paradigm scales.
+- implement CI infrastructure that checks SQL answers against CQL answers and flags mis-matches in PR's.
 
 ## References
 
