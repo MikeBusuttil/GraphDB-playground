@@ -1,6 +1,4 @@
-SELECT
-  CONCAT(TitleOfCourtesy, ' ', FirstName, ' ', LastName) AS name,
-  FORMAT(SUM(Quantity * UnitPrice * (1-Discount)), 2) AS revenue
+SELECT Employees.*
 FROM (
   SELECT Orders.EmployeeID, Details.UnitPrice, Details.Discount, Details.Quantity
   FROM northwind.`order details` AS Details
@@ -9,5 +7,6 @@ FROM (
 ) AS O
 LEFT JOIN northwind.employees AS Employees
 ON O.EmployeeID = Employees.EmployeeID
-GROUP BY NAME
-ORDER BY SUM(Quantity * UnitPrice * (1-Discount)) DESC
+GROUP BY EmployeeID
+ORDER BY SUM(Quantity * UnitPrice * (1 - Discount)) DESC
+LIMIT 3,1

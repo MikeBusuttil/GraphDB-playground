@@ -14,9 +14,13 @@ The following exercises are meant to be tackled by both SQL and CQL to illustrat
 
 5. How much revenue did each employee bring in?
 
-6. How Many Orders were Made under each employee?
+6. Employee record for the employee who brought in the 4th-most revenue?
 
-7. Which Employees had the Highest Cross-Selling Count of 'Chocolade' and Another Product?
+7. How Many Orders were Made under each employee?
+
+8. 3rd highest cost of a single category on any invoice with the category name, the total amount for the products of that category, who sold it, who shipped it, and who supplied most of the products for that particular invoice.
+
+9. Which Employees had the Highest Cross-Selling Count of 'Chocolade' and Another Product?
 
 ## 2. Introductory
 
